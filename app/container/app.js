@@ -15,7 +15,7 @@ export default class App extends Component
             <Provider store={store}>
                 <Router>
                     <Scene key="root">
-                        <Scene key="index" component={Index} initial={true} />
+                        <Scene key="index" component={Index} initial />
                         <Scene key="posts" component={Posts} />
                     </Scene>
                 </Router>
