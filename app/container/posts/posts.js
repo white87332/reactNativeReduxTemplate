@@ -22,6 +22,11 @@ function mapDispatchToProps(dispatch)
 
 class Posts extends React.Component
 {
+    static propTypes = {
+        posts: PropTypes.object.isRequired,
+        actions: PropTypes.object.isRequired
+    }
+
     constructor(props, context)
     {
         super(props, context);
@@ -62,10 +67,5 @@ class Posts extends React.Component
         );
     }
 }
-
-Posts.PropTypes = {
-    posts: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired
-};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);

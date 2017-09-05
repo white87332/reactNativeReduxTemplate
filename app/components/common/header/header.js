@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { styles } from './style';
 
-class Header extends React.Component
+export default class Header extends React.Component
 {
     constructor(props, context)
     {
@@ -19,5 +19,3 @@ class Header extends React.Component
         );
     }
 }
-
-export default Header;
