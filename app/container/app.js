@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider } from 'react-redux';
 import { Scene, Router } from 'react-native-router-flux';
 import configureStore from '../store/configureStore';
@@ -7,8 +7,14 @@ import Posts from './posts/posts';
 
 const store = configureStore();
 
-export default class App extends Component
+export default class App extends React.Component
 {
+    constructor(props)
+    {
+        super(props);
+        this.state = {};
+    }
+
     render()
     {
         return (

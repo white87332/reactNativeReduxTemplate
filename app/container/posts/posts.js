@@ -4,7 +4,7 @@ import { View, Text, Image, ListView } from 'react-native';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import * as postsActions from '../../actions/postsActions';
-import { styles } from './style.js';
+import { styles } from './style';
 
 function mapStateToProps(state)
 {
@@ -16,7 +16,7 @@ function mapStateToProps(state)
 function mapDispatchToProps(dispatch)
 {
     return {
-        actions : bindActionCreators(postsActions, dispatch)
+        actions: bindActionCreators(postsActions, dispatch)
     };
 }
 
@@ -35,10 +35,12 @@ class Posts extends React.Component
 
     rendorRow(rowData)
     {
-        return <View style={styles.container}>
-                    <Image style={styles.thumbnail} source={{uri: rowData.thumbnail}} />
-                    <Text style={styles.rightContainer}>{rowData.title}</Text>
-                </View>;
+        return (
+            <View style={styles.container}>
+                <Image style={styles.thumbnail} source={{ uri: rowData.thumbnail }} />
+                <Text style={styles.rightContainer}>{rowData.title}</Text>
+            </View>
+        );
     }
 
     render()
@@ -54,7 +56,8 @@ class Posts extends React.Component
                     style={styles.listView}
                     enableEmptySections={true}
                     dataSource={ds.cloneWithRows(posts.list)}
-                    renderRow={this.rendorRow} />
+                    renderRow={this.rendorRow}
+                />
             </View>
         );
     }

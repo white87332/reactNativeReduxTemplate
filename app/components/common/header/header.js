@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { styles } from './style.js';
+import { styles } from './style';
 
 class Header extends React.Component
 {
@@ -13,7 +13,7 @@ class Header extends React.Component
     render()
     {
         return (
-            <View style={styles.component}>
+            <View style={styles.container}>
                 <Text>header999</Text>
             </View>
         );
