@@ -1,9 +1,12 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
+import { createEpicMiddleware } from 'redux-observable';
 import reducer from '../reducers';
+import rootEpic from '../epics';
+
+const epicMiddleware = createEpicMiddleware(rootEpic);
 
 const finalCreateStore = compose(
-    applyMiddleware(thunk)
+    applyMiddleware(epicMiddleware)
 )(createStore);
 
 export default function configureStore(initialState)

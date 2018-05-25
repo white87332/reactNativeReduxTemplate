@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { View, Text, Image, ListView } from 'react-native';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
-import * as postsActions from '../../actions/postsActions';
+import * as postsActions from '../../actions/posts';
 import { styles } from './style';
 
 function mapStateToProps(state)
@@ -35,7 +35,7 @@ class Posts extends React.Component
 
     componentDidMount()
     {
-        this.props.actions.postsList();
+        this.props.actions.postsGet();
     }
 
     rendorRow(rowData)

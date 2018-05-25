@@ -1,2 +1,2 @@
-export const GET_LATEST_LIST = 'GET_LATEST_LIST';
-export const GET_ERR = 'GET_ERR';
+export const POSTS_GET$ = 'POSTS_GET';
+export const POSTS_GET_SUC = 'POSTS_GET_SUC';

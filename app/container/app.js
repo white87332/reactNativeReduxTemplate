@@ -21,8 +21,8 @@ export default class App extends React.Component
             <Provider store={store}>
                 <Router>
                     <Scene key="root">
-                        <Scene key="index" component={Index} initial />
-                        <Scene key="posts" component={Posts} />
+                        <Scene key="index" component={Index} />
+                        <Scene key="posts" component={Posts} initial />
                     </Scene>
                 </Router>
             </Provider>
